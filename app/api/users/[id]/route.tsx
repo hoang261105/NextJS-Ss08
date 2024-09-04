@@ -24,7 +24,7 @@ export async function GET(request: any, response: any) {
   });
 }
 
-export async function DELETE(request: any, response: NextApiResponse) {
+export async function DELETE(request: any, response: NextResponse) {
   const data = await request.json();
   return NextResponse.json({ message: "Xoa thanh cong", user: data });
 }

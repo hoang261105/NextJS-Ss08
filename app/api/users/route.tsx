@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 const users = [
   {
@@ -14,7 +14,7 @@ const users = [
   },
 ];
 
-export async function GET(request: NextApiRequest, response: any) {
+export async function GET(request: NextRequest, response: any) {
   const { searchParams } = new URL(request.url || "");
 
   const searchValue = searchParams.get("name");
